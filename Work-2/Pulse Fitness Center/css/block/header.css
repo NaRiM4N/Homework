@@ -1,0 +1,126 @@
+.header__inner {
+	padding-top: 60px;
+	padding-bottom: 52px;
+	border-bottom: 1px solid #888;
+}
+
+.header__container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+@media (width <= 992px) {
+	.header__container {
+		gap: 45px;
+	}
+}
+
+@media (width <= 768px) {
+	.header__menu {
+		position: absolute;
+		padding-top: 144px;
+		padding-right: 15px;
+		top: 0;
+		bottom: 0;
+		right: -100vw;
+		background-color: var(--secondary-color);
+		min-width: 297px;
+		z-index: var(--layer-2);
+		box-shadow: var(--shadow-main-glow);
+		transition:
+			right var(--transition-time),
+			opacity var(--transition-time),
+			visibility var(--transition-time);
+		opacity: 0;
+		visibility: hidden;
+		overflow-y: auto;
+	}
+
+	.header__menu--open {
+		right: 0;
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+.header__menu-list {
+	display: flex;
+	align-items: center;
+}
+@media (width <= 768px) {
+	.header__menu-list {
+		flex-direction: column;
+		align-items: end;
+		text-align: end;
+		gap: 50px;
+	}
+}
+
+@media (width > 768px) {
+	.header__menu-list {
+		/* min-width 768px, max-width 992px */
+		gap: clamp(20px, -5.179rem + 13.39vw, 50px);
+		white-space: nowrap;
+	}
+}
+
+.header__menu-link {
+	position: relative;
+	color: var(--main-color);
+	font-weight: 600;
+}
+
+@media (width > 768px) {
+	.header__menu-link {
+		/* min-width 768px, max-width 992px */
+		font-size: clamp(20px, 0.821rem + 0.89vw, 22px);
+	}
+}
+
+@media (width <= 768px) {
+	.header__menu-link {
+		font-size: 22px;
+	}
+}
+
+.header__menu-link::before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: -14px;
+	transform: translateY(-47%);
+	z-index: var(--layer-negative);
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	opacity: 0;
+	visibility: hidden;
+	background-color: var(--accent-color);
+	transition: opacity var(--transition-time);
+}
+
+@media (any-hover: hover) {
+	.header__menu-link:hover::before {
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+.header__actions {
+	display: flex;
+	gap: 36px;
+}
+
+@media (768px <= width <= 992px) {
+	.header__actions {
+		gap: 20px;
+	}
+}
+
+.header__actions-button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: var(--main-color);
+}
