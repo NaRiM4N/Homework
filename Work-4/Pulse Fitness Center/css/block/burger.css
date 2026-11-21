@@ -1,0 +1,25 @@
+@media (width > 768px) {
+	.burger {
+		display: none;
+	}
+}
+
+@media (width <= 768px) {
+	.burger {
+		width: 25px;
+		height: 22px;
+		align-self: center;
+		z-index: var(--layer-3);
+		position: relative;
+	}
+
+	.burger__icon-menu,
+	.burger--open .burger__icon-cross {
+		display: block;
+	}
+
+	.burger__icon-cross,
+	.burger--open .burger__icon-menu {
+		display: none;
+	}
+}
