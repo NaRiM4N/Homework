@@ -1,4 +1,3 @@
-// import HeaderFixed from "./header.js";
 import BurgerMenu from "./burger.js";
 
 try {
