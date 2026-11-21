@@ -22,5 +22,5 @@ console.log(
 );
 
 // Задача 4
-let result = 123456789falsetrue
+let result = "123456789falsetrue";
 console.log(result);
