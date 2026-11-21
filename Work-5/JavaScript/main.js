@@ -1,12 +1,17 @@
 // Задача 1
 const firstName = "Александр";
+console.log(firstName);
 const lastName = "Иванов";
+console.log(lastName);
 const isStudent = true;
+console.log(isStudent);
 
 // Задача 2
 let age = "22";
+console.log(age);
 let currentYear;
 currentYear = 2026;
+console.log(currentYear);
 const birthYear = currentYear - age;
 
 console.log(birthYear);
